@@ -65,6 +65,15 @@ h1 { margin: 0; max-width: 720px; font-size: clamp(38px, 7vw, 68px); line-height
 .section strong { color: var(--text); }
 .language-note { margin: 38px 0 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; color: var(--muted); font-size: 13px; }
 .updated { color: var(--muted); font-size: 13px; margin-top: 16px; }
+.payment-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 42px; }
+.payment-card { padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); text-align: center; }
+.payment-card h2 { margin: 14px 0 4px; font-size: 20px; letter-spacing: -0.03em; }
+.payment-card p { margin: 0; color: var(--muted); font-size: 13px; }
+.qr-frame { background: #fff; border-radius: 16px; overflow: hidden; aspect-ratio: 1 / 1; display: grid; place-items: center; }
+.qr-frame img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.payment-card .button { width: 100%; margin-top: 14px; }
+.notice { margin-top: 14px; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+.notice p { margin: 0; color: var(--muted); font-size: 13px; }
 footer { margin-top: 54px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 18px; }
 
 @media (max-width: 620px) {
@@ -72,7 +81,7 @@ footer { margin-top: 54px; padding-top: 24px; border-top: 1px solid var(--line);
   .topbar { align-items: flex-start; margin-bottom: 48px; }
   .nav { flex-direction: column; align-items: flex-end; gap: 4px; }
   .grid { grid-template-columns: 1fr; margin-top: 40px; }
+  .payment-grid { grid-template-columns: 1fr; }
   .card { padding: 22px; }
   footer { flex-direction: column; gap: 4px; }
 }
-
